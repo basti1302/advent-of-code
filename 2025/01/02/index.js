@@ -65,6 +65,7 @@ try {
   });
 } catch (err) {
   console.error(err.message);
+  process.exit(1);
 }
 
 console.log(`Zero positions: ${zeroPositions}, ending in ${position}`);
