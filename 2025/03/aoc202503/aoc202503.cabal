@@ -1,0 +1,65 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           aoc202503
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/aoc202503#readme>
+homepage:       https://github.com/githubuser/aoc202503#readme
+bug-reports:    https://github.com/githubuser/aoc202503/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2025 Author name here
+license:        BSD-3-Clause
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/aoc202503
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_aoc202503
+  autogen-modules:
+      Paths_aoc202503
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable aoc20250301-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_aoc202503
+  autogen-modules:
+      Paths_aoc202503
+  hs-source-dirs:
+      01
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aoc202503
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+executable aoc20250302-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_aoc202503
+  autogen-modules:
+      Paths_aoc202503
+  hs-source-dirs:
+      02
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aoc202503
+    , base >=4.7 && <5
+  default-language: Haskell2010
