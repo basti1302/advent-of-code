@@ -3,23 +3,24 @@ import { EOL } from 'node:os';
 
 console.log('\n\n################');
 
+let invalidIds = 0;
+let sumOfInvalidIds = 0;
+
 try {
   const contents = await readFile('input.txt', { encoding: 'utf8' });
   const lines = contents.split(EOL);
 
-  var invalidIds = 0;
-  var sumOfInvalidIds = 0;
   lines.forEach(line => {
     if (line == null || line.trim() == '') {
       return;
     }
     const ranges = line.split(',');
     ranges.forEach(range => {
-      var invalidIdsForThisRange = 0;
+      let invalidIdsForThisRange = 0;
       const [startS, endS] = range.split('-');
       const start = parseInt(startS, 10);
       const end = parseInt(endS, 10);
-      for (var id = start; id <= end; id++) {
+      for (let id = start; id <= end; id++) {
         if (isRepeatedSequence(id + '')) {
           invalidIds++;
           sumOfInvalidIds += id;

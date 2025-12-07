@@ -1,18 +1,18 @@
 import { readFile } from 'node:fs/promises';
 import { EOL } from 'node:os';
 
-var zeroPositions = 0;
+let zeroPositions = 0;
 
 try {
   const contents = await readFile('input.txt', { encoding: 'utf8' });
   const lines = contents.split(EOL);
 
-  var position = 50;
+  let position = 50;
   lines.forEach(line => {
     if (line == null || line.trim() == '') {
       return;
     }
-    var sign = 1;
+    let sign = 1;
     const direction = line[0];
     if (direction == 'R') {
       // no-op
